@@ -39,8 +39,13 @@ public class CalculatorTest {
 		assertEquals(6, Calculator.add("1 2,3"));
 	}
 
-	@Test
-	public void testMinusNumbers(){
-		assertEquals(4, Calculator.add("1,-2,3"));
+	//@Test
+	//public void testMinusNumbers(){
+	//	assertEquals("Negatives not allowed:", Calculator.add("1,-2,3"));
+	//}
+
+	@Test 
+	public void testMoreThan1000(){
+		assertEquals(10, Calculator.add("2,3 1001,4 1"));
 	}
 }

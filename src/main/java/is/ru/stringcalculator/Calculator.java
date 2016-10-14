@@ -22,12 +22,22 @@ public class Calculator {
 
 	private static int sum(String[] numbers){
 		int total = 0;
+		String minusNumbers = "";
+
 		for(String number : numbers){
-			if (toInt(number) < 0)
+			if (toInt(number) < 0){
+				minusNumbers += number;
+			}
+			else if (toInt(number) > 1000)
 				total = total;
 			else
 				total += toInt(number);
 		}
-		return total;
+
+		if (minusNumbers.isEmpty())
+			return total;
+		else
+			throw new IllegalArgumentException("Negatives not allowed:");
 	}
+
 }
