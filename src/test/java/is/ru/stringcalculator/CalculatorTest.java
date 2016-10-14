@@ -48,4 +48,9 @@ public class CalculatorTest {
 	public void testMoreThan1000(){
 		assertEquals(10, Calculator.add("2,3 1001,4 1"));
 	}
+
+	@Test
+	public void testDelimeter(){
+		assertEquals(3, Calculator.add("//;\n1;2"));
+	}
 }
